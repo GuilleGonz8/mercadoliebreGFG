@@ -1,0 +1,74 @@
+:root {
+    --background-color: #EAC926;
+    --color-1: #03264C;
+    --boton-icono: #1259c3;
+    --color-2: #666;
+    --color-3: #ebebeb;
+    --color-4: #39b54a;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 12px;
+    background-color: var(--background-color);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+footer article i {
+    size: 2em;
+    margin-bottom: 10px;
+}
+
+nav {
+    padding-bottom: 4px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: #000;
+    /* Cambia el color del texto a negro */
+}
+
+/* Cambiar el color del texto al pasar el mouse por encima */
+nav a:hover {
+    color: #00f;
+    /* Cambia el color a azul al pasar el mouse por encima */
+}
+
+.precio {
+    font-size: 18px;
+}
+
+.descuento {
+    font-size: 16px;
+}
+
+.descripcion {
+    font-size: 16px;
+}
+
+.compra {
+    text-align: center;
+}
+
+.burger-menu {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    border: solid 3px var(--boton-icono);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--boton-icono);
+    font-size: large;
+}
