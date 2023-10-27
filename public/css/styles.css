@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --background-color: #EAC926;
     --color-1: #03264C;
@@ -62,10 +68,9 @@ nav a:hover {
 }
 
 .burger-menu {
-    display: inline-block;
+    margin: auto;
+    width: 2rem;
     color: white;
-    text-align: center;
-    box-sizing: border-box;
     border: solid 3px var(--boton-icono);
     padding: 5px;
     border-radius: 5px;
