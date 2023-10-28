@@ -23,9 +23,39 @@ h2 {
     font-size: 24px;
 }
 
+main {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+main article {
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--color-3);
+}
+
+footer article {
+    text-align: center;
+}
+
+footer article h4 {
+    color: var(--color-2);
+    font-weight: 700;
+}
+
+footer article p {
+    color: var(--color-2);
+}
+
+
 footer article i {
     size: 2em;
     margin-bottom: 10px;
+    text-align: center;
+    color: var(--boton-icono);
 }
 
 nav {
@@ -69,11 +99,15 @@ nav a:hover {
 
 .burger-menu {
     margin: auto;
-    width: 2rem;
+    width: 2.3rem;
     color: white;
-    border: solid 3px var(--boton-icono);
-    padding: 5px;
-    border-radius: 5px;
+    padding: 7px;
+    border-radius: 6px;
     background-color: var(--boton-icono);
     font-size: large;
+    text-align: center;
+}
+
+.logo {
+    width: 340px
 }
