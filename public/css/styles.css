@@ -159,6 +159,8 @@ footer article i {
     color: var(--CELESTE);
 }
 
+@media (min-width: 361px) {}
+
 @media (min-width: 770px) {
 
     .main-header-top {
@@ -174,10 +176,18 @@ footer article i {
     .main-header-nav-bar {
         display: flex;
         border: dotted 5px blue;
+        justify-content: space-between;
     }
 
     .main-header-nav-bar ul {
         list-style-type: none;
+        display: flex;
+    }
+
+    .main-header-nav-bar li {
+        padding: 5px;
+        margin: 0px 5px;
+        font-size: 14px;
     }
 
     .main-header-nav-bar a {
@@ -193,17 +203,17 @@ footer article i {
         display: none;
     }
 
+    .section-last-view,
+    .section-ofertas {
+        flex-wrap: nowrap;
+    }
+
     .producto {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
     .producto-descripcion h3 {
         display: block;
-    }
-
-    .section-last-view,
-    .section-ofertas {
-        flex-wrap: nowrap;
     }
 
     .producto-descripcion h3 {
