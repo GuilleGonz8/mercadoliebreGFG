@@ -5,80 +5,126 @@
 }
 
 :root {
-    --background-color: #EAC926;
-    --color-1: #03264C;
-    --boton-icono: #1259c3;
-    --color-2: #666;
-    --color-3: #ebebeb;
-    --color-4: #39b54a;
-    font-family: 'Roboto', sans-serif;
+    --AMARILLO: #EAC926;
+    --AZUL: #03264C;
+    --CELESTE: #1259c3;
+    --GRIS-OSCURO: #666;
+    --GRIS-CLARO: #ebebeb;
+    --VERDE: #39b54a;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: var(--background-color);
 }
 
-h2 {
-    font-size: 24px;
+.main-header {
+    background-color: var(--AMARILLO);
+}
+
+.main-header-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    width: 50%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.compra {
+    text-align: center;
+}
+
+.home-banner {
+    max-width: 100%;
+}
+
+.home-banner img {
+    max-width: 100%;
+}
+
+.main-header-nav-bar {
+    display: none;
+}
+
+.burger-menu {
+    margin: auto;
+    width: 2.3rem;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: var(--CELESTE);
+    font-size: large;
+    text-align: center;
 }
 
 main {
-    margin: auto;
-    text-align: center;
+    background-color: var(--GRIS-CLARO);
     width: 90%;
+    margin: auto;
 }
 
-main article {
-    padding: 10px;
+.titulos {
+    font-size: 24px;
+    color: var(--GRIS-OSCURO);
+    text-align: left;
+    padding: 15px;
 }
 
-footer {
-    background-color: var(--color-3);
+.section-last-view,
+.section-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-footer article {
-    text-align: center;
+.producto {
+    margin: 10px;
+    /*Entre cada artículo hay una separación de 10 píxeles*/
 }
 
-footer article h4 {
-    color: var(--color-2);
-    font-weight: 700;
+.producto img {
+    max-width: 100%;
+    height: auto;
 }
 
-footer article p {
-    color: var(--color-2);
+.producto-descripcion {
+    border-top: solid 1px var(--GRIS-CLARO);
+    padding: 15px;
+    text-align: left;
+    border: solid 2px black;
+    position: relative;
 }
 
-
-footer article i {
-    size: 2em;
-    margin-bottom: 10px;
-    text-align: center;
-    color: var(--boton-icono);
+.producto-descripcion h3 {
+    display: none;
 }
 
-nav {
-    padding-bottom: 4px;
+.logo-envio {
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--VERDE);
+    color: var(--VERDE);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    text-decoration: none;
-    /* Elimina el subrayado */
-    color: #000;
-    /* Cambia el color del texto a negro */
-}
-
-/* Cambiar el color del texto al pasar el mouse por encima */
-nav a:hover {
-    color: #00f;
-    /* Cambia el color a azul al pasar el mouse por encima */
+.precio,
+.descuento {
+    display: inline-block;
 }
 
 .precio {
@@ -87,27 +133,81 @@ nav a:hover {
 
 .descuento {
     font-size: 16px;
+    color: var(--VERDE);
 }
 
-.descripcion {
+footer {
     font-size: 16px;
+    color: var(--GRIS-OSCURO);
+    padding: 20px;
 }
 
-.compra {
+footer article {
     text-align: center;
+    padding: 40px;
+    margin: 8px;
 }
 
-.burger-menu {
-    margin: auto;
-    width: 2.3rem;
-    color: white;
-    padding: 7px;
-    border-radius: 6px;
-    background-color: var(--boton-icono);
-    font-size: large;
+.footer-titulares {
+    font-weight: 400;
+}
+
+footer article i {
+    font-size: 2em;
+    margin-bottom: 10px;
     text-align: center;
+    color: var(--CELESTE);
 }
 
-.logo {
-    width: 340px
+@media (min-width: 770px) {
+
+    .main-header-top {
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .compra {
+        text-align: inherit;
+    }
+
+    .main-header-nav-bar {
+        display: flex;
+        border: dotted 5px blue;
+    }
+
+    .main-header-nav-bar ul {
+        list-style-type: none;
+    }
+
+    .main-header-nav-bar a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .main-header-nav-bar a::hover {
+        color: #340bec;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .producto-descripcion h3 {
+        display: block;
+    }
+
+    .section-last-view,
+    .section-ofertas {
+        flex-wrap: nowrap;
+    }
+
+    .producto-descripcion h3 {
+        display: block;
+    }
+
 }
