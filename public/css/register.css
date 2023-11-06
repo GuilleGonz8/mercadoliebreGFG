@@ -1,0 +1,29 @@
+.contenedor-formulario {
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 15px auto 15px;
+    border-radius: 3%;
+    background-color: white;
+
+}
+
+@media (min-width: 425px) {
+    .contenedor-formulario {
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .contenedor-formulario {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenedor-formulario {
+        width: 40%;
+    }
+}

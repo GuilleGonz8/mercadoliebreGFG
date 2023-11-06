@@ -82,7 +82,11 @@ body {
     text-align: center;
 }
 
-
+main {
+    background-color: var(--GRIS-CLARO);
+    width: 90%;
+    margin: auto;
+}
 
 footer {
     font-size: 16px;
@@ -153,4 +157,31 @@ footer article i {
         font-size: 1rem;
         padding: 10px;
     }
+
+    .footer-textos {
+        display: flex;
+    }
+
+    footer {
+        font-size: 0.67rem;
+    }
+
+    footer article {
+        padding: 5px 5px 20px 5px;
+        margin: 4px;
+    }
+
+    footer article i {
+
+        transition: all ease-in-out 500ms;
+    }
+
+    footer article i:hover {
+
+        color: var(--VERDE);
+        font-size: 3em;
+
+    }
+
+
 }
