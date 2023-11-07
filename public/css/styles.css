@@ -21,6 +21,7 @@ body {
 
 .main-header {
     background-color: var(--AMARILLO);
+    height: 9rem;
 }
 
 .main-header-top {
@@ -30,8 +31,16 @@ body {
     align-items: center;
 }
 
+.contenedor-logo-searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
+    display: block;
     width: 50%;
+    text-decoration: none;
 }
 
 .search-bar {
@@ -115,6 +124,10 @@ footer article i {
 
 @media (min-width: 768px) {
 
+    .main-header {
+        height: 6.5rem;
+    }
+
     .main-header-top {
         flex-wrap: nowrap;
     }
@@ -152,6 +165,10 @@ footer article i {
 }
 
 @media (min-width: 1024px) {
+
+    .main-header {
+        height: 7.5rem;
+    }
 
     .main-header-nav-bar li {
         font-size: 1rem;
