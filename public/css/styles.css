@@ -38,21 +38,21 @@ body {
 }
 
 .logo {
-    display: block;
     width: 50%;
-    text-decoration: none;
 }
 
 .search-bar {
     display: flex;
     justify-content: center;
     width: 50%;
+    padding: 8px;
 }
 
 .search-bar input {
     border: none;
     padding: 7px;
     border-radius: 5px 0px 0px 5px;
+    width: 100%;
 }
 
 .search-bar button {
@@ -170,6 +170,14 @@ footer article i {
         height: 7.5rem;
     }
 
+    .main-header-top {
+        justify-content: space-around;
+    }
+
+    .contenedor-logo-searchBar {
+        width: 645px;
+    }
+
     .main-header-nav-bar li {
         font-size: 1rem;
         padding: 10px;
@@ -199,6 +207,5 @@ footer article i {
         font-size: 3em;
 
     }
-
 
 }

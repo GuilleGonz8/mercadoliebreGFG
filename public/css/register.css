@@ -6,13 +6,27 @@
     margin: 15px auto 15px;
     border-radius: 3%;
     background-color: white;
+    width: 90%;
 
 }
 
-@media (min-width: 425px) {
-    .contenedor-formulario {
-        width: 90%;
-    }
+.container-botones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4px;
+    padding: 6px;
+}
+
+.container-botones button {
+    padding: 12px;
+    border-radius: 8%;
+    background-color: #3483fa;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border-color: transparent;
+
 }
 
 
