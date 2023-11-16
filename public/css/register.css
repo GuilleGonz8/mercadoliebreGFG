@@ -1,33 +1,167 @@
 .contenedor-formulario {
-    border: solid 1px red;
     display: flex;
     flex-direction: column;
     padding: 20px;
     margin: 15px auto 15px;
-    border-radius: 3%;
+    border-radius: 15px;
     background-color: white;
     width: 90%;
 
 }
 
+.contenedor-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.contenedor-input input {
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom: #3483fa solid 1px;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease;
+}
+
+.contenedor-input input:active,
+.contenedor-input input:focus {
+    border-bottom: blue solid 2px;
+}
+
+.contenedor-input label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    margin-left: 16px;
+    line-height: 16px;
+    color: #3483fa;
+    transition: all 0.3s ease;
+}
+
+.contenedor-input input:focus+label,
+.contenedor-input input:active+label,
+.contenedor-input input:valid+label {
+    top: -12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: blue;
+    margin-left: 0px;
+}
+
+.contenedor-fecha,
+.contenedor-FP,
+.contenedor-categorias,
+.contenedor-foto {
+    margin-bottom: 28px;
+    border: 1px #3483fa solid;
+}
+
+.contenedor-foto,
+.contenedor-fecha {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contenedor-foto label,
+.contenedor-fecha label {
+    position: absolute;
+    background-color: white;
+    top: -8px;
+    left: 15px;
+    padding: 0px 6px 0px;
+    color: #3483fa;
+}
+
+.contenedor-foto input,
+.contenedor-fecha input {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.contenedor-FP,
+.contenedor-categorias {
+    position: relative;
+}
+
+.sub-titulos {
+    position: absolute;
+    background-color: white;
+    top: -8px;
+    left: 15px;
+    padding: 0px 6px 0px;
+    color: #3483fa;
+}
+
+.contenedor-radio {
+    padding: 15px;
+}
+
+.contenedor-radio label,
+.contenedor-radio input {
+    margin-right: 15px;
+    color: #3483fa;
+    font-size: 16px;
+
+}
+
+.contenedor-radio input {
+    margin-right: 4px;
+
+}
+
+.contenedor-checkbox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor-checkbox-col {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 10px;
+    justify-content: space-around;
+}
+
+.contenedor-checkbox-col label {
+    color: #3483fa;
+    font-size: 15px;
+}
+
+.contenedor-checkbox-col input {
+    margin-right: 15px;
+    color: #3483fa;
+    font-size: 15px;
+}
+
+
 .container-botones {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin: 4px;
-    padding: 6px;
 }
 
 .container-botones button {
     padding: 12px;
-    border-radius: 8%;
-    background-color: #3483fa;
+    border-radius: 10px;
     color: white;
     font-weight: 700;
     font-size: 14px;
     border-color: transparent;
 
 }
+
+.container-botones button[type='submit'] {
+    background-color: green;
+}
+
+.container-botones button[type='reset'] {
+    background-color: red;
+}
+
 
 
 @media (min-width: 768px) {
