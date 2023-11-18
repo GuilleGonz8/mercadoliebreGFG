@@ -72,36 +72,44 @@
 
             <div class="contenedor-input">
 
-                <input type="text" name="fullname" id="fullname" required>
+                <input type="text" name="fullname" placeholder=" " id="fullname" minlength="5" required>
                 <label for="fullname">Nombre y Apellido</label>
+                <div class="mensajeError"></div>
 
             </div>
 
+
             <div class="contenedor-input">
 
-                <input type="text" name="username" id="username" required>
+                <input type="text" name="username" placeholder=" " minlength="5" id="username" required>
                 <label for="username">Nombre de usuari@</label>
+                <div class="mensajeError"></div>
 
             </div>
+
 
             <div class="contenedor-input">
 
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" placeholder=" " id="email" required>
                 <label for="email">Correo electrónico</label>
+                <div class="mensajeError"></div>
 
             </div>
+
 
             <div class="contenedor-fecha">
 
+                <input type="date" name="birthdate" id="birthdate" min="1924-01-01" max="2006-12-31" required>
                 <label for="birthdate">Fecha de nacimiento</label>
-                <input type="date" name="birthdate" id="birthdate" required>
+                <div class="mensajeError"></div>
 
             </div>
 
             <div class="contenedor-FP">
                 <label class="sub-titulos" for="perfil_usuario">Perfil de Usuario</label>
                 <div class="contenedor-radio">
-                    <label for="comprador"><input type="radio" name="perfil_usuario" id="comprador">Comprar</label>
+                    <label for="comprador"><input type="radio" name="perfil_usuario" id="comprador"
+                            required>Comprar</label>
                     <label for="vendedor"><input type="radio" name="perfil_usuario" id="vendedor">Vender</label>
                 </div>
             </div>
@@ -126,27 +134,36 @@
                     </div>
 
                 </div>
+                <p>Selecciona como minimo 1 categoria antes de enviar el formulario</p>
 
             </div>
 
             <div class="contenedor-foto">
-                <label for="foto">Foto de Usuario</label>
                 <input type="file" id="foto" name="foto" accept=".png, .jpg" required>
+                <label for="foto">Foto de Usuario</label>
             </div>
 
             <div class="contenedor-input">
 
-                <input type="password" id="psw" name="contrasena" required>
+                <input type="password" id="psw" placeholder=" "
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" name="contrasena"
+                    required>
                 <label for="psw">Contraseña:</label>
+                <div class="mensajeError"></div>
 
             </div>
+
 
             <div class="contenedor-input">
 
-                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
+                <input type="password" id="confirmar_contrasena" placeholder=" "
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                    name="confirmar_contrasena" required>
                 <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+                <div class="mensajeError"></div>
 
             </div>
+
 
 
 

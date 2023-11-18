@@ -42,8 +42,7 @@
 }
 
 .contenedor-input input:focus+label,
-.contenedor-input input:active+label,
-.contenedor-input input:valid+label {
+.contenedor-input input:active+label {
     top: -12px;
     font-size: 12px;
     line-height: 12px;
@@ -51,12 +50,70 @@
     margin-left: 0px;
 }
 
+
+
+/*INVALIDO INPUT*/
+.contenedor-input input:not(:placeholder-shown)+label {
+    top: -12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: red;
+    margin-left: 0px;
+}
+
+.contenedor-input input:not(:placeholder-shown) {
+    border-bottom: RED solid 2px;
+}
+
+.contenedor-input input[type="text"]:not(:placeholder-shown)~.mensajeError::before {
+    content: 'Tiene que tener un minimo de 5 caracteres';
+    background-color: red;
+    border: solid 1px white;
+    color: white;
+    font-size: 0.7rem;
+
+}
+
+.contenedor-input input[type="email"]:not(:placeholder-shown)~.mensajeError::before {
+    content: 'Tiene que respetar el formato example@example';
+    background-color: red;
+    border: solid 1px white;
+    color: white;
+    font-size: 0.7rem;
+
+}
+
+.contenedor-input input[type="password"]:not(:placeholder-shown)~.mensajeError::before {
+    content: 'Al menos una letra minúscula.\A Al menos una letra mayúscula.\A Al menos un número.\A Al menos un carácter especial de la lista "@$!%*?&".\A La longitud mínima de la contraseña es de 8 caracteres.';
+    white-space: pre-line;
+    background-color: red;
+    border: solid 1px white;
+    color: white;
+    font-size: 0.7rem;
+}
+
+/*VALIDO INPUT*/
+.contenedor-input input:valid+label {
+    top: -12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: green;
+    margin-left: 0px;
+}
+
+.contenedor-input input:valid {
+    border-bottom: green solid 2px;
+}
+
+.contenedor-input input:valid~.mensajeError::before {
+    display: none;
+}
+
 .contenedor-fecha,
 .contenedor-FP,
 .contenedor-categorias,
 .contenedor-foto {
     margin-bottom: 28px;
-    border: 1px #3483fa solid;
 }
 
 .contenedor-foto,
@@ -70,7 +127,7 @@
 .contenedor-fecha label {
     position: absolute;
     background-color: white;
-    top: -8px;
+    top: -7px;
     left: 15px;
     padding: 0px 6px 0px;
     color: #3483fa;
@@ -82,17 +139,68 @@
     font-size: 16px;
     border: none;
     outline: none;
+    border: 1px #3483fa solid;
+}
+
+/*INVALIDO INPUT----------PARA FECHA*/
+.contenedor-fecha input:focus:invalid {
+    border: 1px red solid;
+}
+
+.contenedor-fecha input:focus:invalid+label {
+    color: red;
+}
+
+.contenedor-fecha input:focus:invalid~.mensajeError::before {
+    content: 'La fecha ingresada debe ser menor a 2006-12-31 y mayor a 1924-01-01';
+    background-color: red;
+    border: solid 1px white;
+    color: white;
+    font-size: 0.7rem;
+}
+
+/*VALIDO INPUT-----PARA FECHA*/
+.contenedor-fecha input:valid {
+    border: 1px green solid;
+}
+
+.contenedor-fecha input:valid+label {
+    color: green;
+}
+
+.contenedor-fecha input:valid~.mensajeError::before {
+    display: none;
+}
+
+/*VALIDO INPUT-----PARA FOTO*/
+.contenedor-foto input:valid {
+    border: 1px green solid;
+}
+
+.contenedor-foto input:valid+label {
+    color: green;
+}
+
+.contenedor-foto input:valid~.mensajeError::before {
+    display: none;
 }
 
 .contenedor-FP,
 .contenedor-categorias {
     position: relative;
+    border: 1px #3483fa solid;
+}
+
+.contenedor-categorias p {
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 700;
 }
 
 .sub-titulos {
     position: absolute;
     background-color: white;
-    top: -8px;
+    top: -7px;
     left: 15px;
     padding: 0px 6px 0px;
     color: #3483fa;
@@ -161,7 +269,6 @@
 .container-botones button[type='reset'] {
     background-color: red;
 }
-
 
 
 @media (min-width: 768px) {
