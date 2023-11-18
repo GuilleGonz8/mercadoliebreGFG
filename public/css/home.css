@@ -1,3 +1,11 @@
+.home-banner {
+    max-width: 100%;
+}
+
+.home-banner img {
+    max-width: 100%;
+}
+
 .titulos {
     font-size: 24px;
     color: var(--GRIS-OSCURO);

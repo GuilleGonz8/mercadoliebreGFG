@@ -62,10 +62,6 @@
         </div>
     </header>
 
-    <div class="home-banner">
-        <img src="images/img-home-banner.jpg" alt="Baner de la pagina">
-    </div>
-
     <main>
 
         <form action="home.html" method="POST" class="contenedor-formulario">
@@ -101,6 +97,14 @@
 
                 <input type="date" name="birthdate" id="birthdate" min="1924-01-01" max="2006-12-31" required>
                 <label for="birthdate">Fecha de nacimiento</label>
+                <div class="mensajeError"></div>
+
+            </div>
+
+            <div class="contenedor-input">
+
+                <input type="text" name="domicilio" placeholder=" " minlength="20" id="domicilio" required>
+                <label for="domicilio">Domicilio</label>
                 <div class="mensajeError"></div>
 
             </div>

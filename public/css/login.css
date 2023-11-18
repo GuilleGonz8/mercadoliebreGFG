@@ -5,7 +5,7 @@
     margin: 15px auto 15px;
     border-radius: 15px;
     background-color: white;
-
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .contenedor-input {

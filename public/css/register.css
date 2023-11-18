@@ -6,7 +6,7 @@
     border-radius: 15px;
     background-color: white;
     width: 90%;
-
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .contenedor-input {
@@ -65,8 +65,18 @@
     border-bottom: RED solid 2px;
 }
 
-.contenedor-input input[type="text"]:not(:placeholder-shown)~.mensajeError::before {
+.contenedor-input input[type="text"][id="fullname"]:not(:placeholder-shown)~.mensajeError::before,
+.contenedor-input input[type="text"][id="username"]:not(:placeholder-shown)~.mensajeError::before {
     content: 'Tiene que tener un minimo de 5 caracteres';
+    background-color: red;
+    border: solid 1px white;
+    color: white;
+    font-size: 0.7rem;
+
+}
+
+.contenedor-input input[type="text"][id="domicilio"]:not(:placeholder-shown)~.mensajeError::before {
+    content: 'Tiene que tener un minimo de 20 caracteres';
     background-color: red;
     border: solid 1px white;
     color: white;
